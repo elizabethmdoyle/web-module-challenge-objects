@@ -16,10 +16,12 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
+function createMenuItem(object, key, value){
+   //object[key] = value;
+  return key.value
 }
 
+console.log(createMenuItem('tacos', 8, 'Lunch'))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
