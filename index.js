@@ -84,7 +84,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
+console.log(reviews[5].feedback, 'task 3')
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
@@ -92,7 +92,9 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
+reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
 
+console.log(reviews, 'task 4')
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array. 
@@ -106,11 +108,12 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(reviews, name, rating, feedback){
+   reviews.push(name, rating, feedback)
+    return reviews; 
 }
 
-
+console.log(addReview(reviews, 'Billy', 2, "Lame food!"),'task 5')
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -123,11 +126,11 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, number) {
+    return `${array[number].name} gave the restaurant a ${array[number].rating} review, and their feedback was: ${array[number].feedback}`
 }
 
-  
+  console.log(getReviewByIndex(reviews, 0), 'task 6')
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
